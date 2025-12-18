@@ -1,0 +1,21 @@
+Windows Registry Editor Version 5.00
+
+; --- 1. Klasörün İÇİNDE boşluğa sağ tıklayınca (Arkaplan) ---
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Gitingest]
+@="Gitingest"
+"Icon"="shell32.dll,22"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Gitingest\command]
+; DİKKAT: Aşağıdaki dosya yolunu kendi bilgisayarınızdaki konuma göre düzenleyin!
+; Çift ters slash (\\) kullanmayı unutmayın.
+@="wscript.exe \"C:\\MADDE\\tools\\gitingest-context-menu\\silent_runner.vbs\" \"%V\""
+
+
+; --- 2. Klasörün kendisine sağ tıklayınca (İkon) ---
+[HKEY_CLASSES_ROOT\Directory\shell\Gitingest]
+@="Gitingest"
+"Icon"="shell32.dll,22"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Gitingest\command]
+; DİKKAT: Aşağıdaki dosya yolunu kendi bilgisayarınızdaki konuma göre düzenleyin!
+@="wscript.exe \"C:\\MADDE\\tools\\gitingest-context-menu\\silent_runner.vbs\" \"%V\""
